@@ -29,7 +29,7 @@ function post_success(response) {
     <div id="box_color">
         <h3>Name: ${response[`data`][`data`][i][`name`]}</h3>
         <p>Year created: ${response[`data`][`data`][i][`year`]}</p>
-        <div></div>
+        <div id="div_${i}"></div>
     </div>
     `
     );
