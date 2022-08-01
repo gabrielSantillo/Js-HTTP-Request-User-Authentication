@@ -24,11 +24,11 @@ else {
 }
 
 /* this function is call if the user is at the page without making any login*/
-function backToLogin(details) {
+function logoutFunction(details) {
     /*leave the user to the login page  */
   location.href = `/index.html`;
-  /* delete the cookie, just in case */
-  Cookies.delete(`token`);
+  /* delete the cookie */
+  Cookies.remove(`token`);
 }
 
 /* if the cookie, contains value, this function is called */
@@ -60,6 +60,6 @@ function post_failure(error) {
 let section = document.querySelector(`section`);
 
 /* getting the button that leave the user back to the login page by its id */
-let back_to_login_page = document.getElementById(`log_in`);
-/* when this button is clicked, call the function backToLogin */
-back_to_login_page.addEventListener(`click`, backToLogin)
+let logout_button = document.getElementById(`logout_button`);
+/* when this button is clicked, call the function logoutFunction */
+logout_button.addEventListener(`click`, logoutFunction);
